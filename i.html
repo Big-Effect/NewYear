@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מתנה לשנה החדשה | ביג אפקט בע"מ</title>
+    <!-- שימוש ב-Tailwind CSS לעיצוב רספונסיבי ומודרני -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* אנימציות חגיגיות וחלקות */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+        /* התאמת גובה סרטוני יוטיוב רספונסיביים */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* יחס 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen flex items-center justify-center p-4 sm:p-8 font-sans">
+
+    <!-- המעטפת המרכזית (כמו כרטיס ברכה חגיגי) -->
+    <div class="bg-white max-w-3xl w-full rounded-xl shadow-xl overflow-hidden relative border border-gray-100">
+        
+        <!-- פס עיטור עליון בצבע זהב וכחול -->
+        <div class="h-2 w-full bg-gradient-to-r from-[#0B192C] via-[#D4AF37] to-[#0B192C]"></div>
+
+        <div class="p-8 sm:p-12">
+            
+            <!-- כותרת ופתיח -->
+            <div class="text-center mb-10">
+                <h1 class="text-3xl sm:text-4xl font-bold text-[#0B192C] mb-4">איך תיראה שנת העסקים הקרובה שלך? ✨</h1>
+                <p class="text-gray-600 text-lg mb-2">לקראת השנה החדשה, בחרתי להעניק לך מתנה שתעזור לך להפוך את החזון לתוצאות בשטח.</p>
+                <p class="text-gray-800 font-medium text-lg">כדי שהמתנה תהיה מדויקת עבורך, אני צריכה לדעת: <br class="hidden sm:block">מהו היעד המרכזי שחשוב לך לפצח השנה?</p>
+                <p class="text-sm text-[#D4AF37] mt-3 italic">לחצ/י על המטרה שלך, והמתנה כבר מחכה לך בפנים 🎁</p>
+            </div>
+
+            <!-- כפתורי בחירה (המשפך) -->
+            <div class="flex flex-col gap-4 mb-8" id="choice-buttons">
+                <button onclick="showSection('sales')" class="w-full text-right sm:text-center px-6 py-4 rounded-lg border-2 border-[#0B192C] text-[#0B192C] font-bold hover:bg-[#0B192C] hover:text-[#D4AF37] transition-colors duration-300 shadow-sm">
+                    1. להגדיל את המכירות ולסגור יותר עסקאות
+                </button>
+                <button onclick="showSection('marketing')" class="w-full text-right sm:text-center px-6 py-4 rounded-lg border-2 border-[#0B192C] text-[#0B192C] font-bold hover:bg-[#0B192C] hover:text-[#D4AF37] transition-colors duration-300 shadow-sm">
+                    2. שיווק אפקטיבי – לגייס לקוחות בצורה חכמה ומדויקת
+                </button>
+                <button onclick="showSection('authority')" class="w-full text-right sm:text-center px-6 py-4 rounded-lg border-2 border-[#0B192C] text-[#0B192C] font-bold hover:bg-[#0B192C] hover:text-[#D4AF37] transition-colors duration-300 shadow-sm">
+                    3. בניית מותג – להפוך לאוטוריטה שלקוחות קונים רק ממנה
+                </button>
+            </div>
+
+            <!-- אזור התוצאות (מוסתר כברירת מחדל) -->
+            <div id="results-container">
+                
+                <!-- תוצאה 1: מכירות -->
+                <div id="sales-section" class="hidden fade-in bg-slate-50 p-6 rounded-lg border-r-4 border-[#0B192C]">
+                    <h2 class="text-2xl font-bold text-[#0B192C] mb-3">בחרת נכון. השנה המספרים הולכים לדבר.</h2>
+                    <p class="text-gray-700 mb-6">מכירות הן החמצן של העסק. כדי להגדיל אותן אנחנו צריכים שיטתיות, לא מזל. פתחתי עבורך גישה חופשית להרצאה שלי על הגדלת מכירות. נבין איך לנטרל התנגדויות ואיך בונים תהליך שמרגיש טבעי ומייצר תוצאות.</p>
+                    <div class="video-container mb-4">
+                        <!-- הטמעת יוטיוב בטוחה -->
+                        <iframe src="https://www.youtube.com/embed/_3Hkql7GJFA" title="הרצאת מכירות" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="text-center text-sm text-gray-500">
+                        הלינק הישיר לסרטון: <a href="https://youtu.be/_3Hkql7GJFA" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">https://youtu.be/_3Hkql7GJFA</a>
+                    </div>
+                </div>
+
+                <!-- תוצאה 2: שיווק -->
+                <div id="marketing-section" class="hidden fade-in bg-slate-50 p-6 rounded-lg border-r-4 border-[#0B192C]">
+                    <h2 class="text-2xl font-bold text-[#0B192C] mb-3">בחרת נכון. השנה השיווק שלך יעבוד בשבילך.</h2>
+                    <p class="text-gray-700 mb-6">שיווק שעובד מבוסס על אסטרטגיה חכמה. פתחתי עבורך גישה חופשית להרצאה: <strong>'אסטרטגיות לגיוס לקוחות ושיווק אפקטיבי לעסקים'</strong>. נבין איך לדייק את המסר ולמשוך את הקהל הנכון אלייך.</p>
+                    <div class="video-container mb-4">
+                        <!-- הטמעת יוטיוב בטוחה -->
+                        <iframe src="https://www.youtube.com/embed/eOjUJPcN5mM" title="הרצאת שיווק" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="text-center text-sm text-gray-500">
+                        הלינק הישיר לסרטון: <a href="https://youtu.be/eOjUJPcN5mM" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">https://youtu.be/eOjUJPcN5mM</a>
+                    </div>
+                </div>
+
+                <!-- תוצאה 3: אוטוריטה -->
+                <div id="authority-section" class="hidden fade-in bg-slate-50 p-6 rounded-lg border-r-4 border-[#0B192C]">
+                    <h2 class="text-2xl font-bold text-[#0B192C] mb-3">בחרת נכון. השנה הלקוחות יחפשו אותך.</h2>
+                    <p class="text-gray-700 mb-6">יש הבדל עצום בין להיות 'עוד עסק' – לבין להיות האוטוריטה. פתחתי עבורך גישה חופשית להרצאה: <strong>'איך להפוך לאוטוריטה שהלקוחות רוצים לקנות רק ממנה'</strong>. נלמד איך לייצר בידול שאי אפשר להתעלם ממנו.</p>
+                    <div class="video-container mb-4">
+                        <!-- הטמעת יוטיוב בטוחה -->
+                        <iframe src="https://www.youtube.com/embed/iLt5fcRzcJs" title="הרצאת אוטוריטה" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="text-center text-sm text-gray-500">
+                        הלינק הישיר לסרטון: <a href="https://youtu.be/iLt5fcRzcJs" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">https://youtu.be/iLt5fcRzcJs</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- אזור קריאה לפעולה (Footer CTA) - מוסתר עד לבחירה -->
+            <div id="footer-cta" class="hidden fade-in mt-10 pt-8 border-t border-gray-200 text-center">
+                <p class="text-gray-700 font-medium mb-1">צפייה מהנה ושנה של עשייה ממוקדת, צמיחה והרבה ביג אפקט.</p>
+                <p class="text-gray-700 mb-5">לקראת השנה החדשה, הכנתי לך מתנה נוספת: <strong>פגישת אסטרטגיה מתנה איתי.</strong></p>
+                
+                <!-- כפתור הקלנדלי - הוקטן משמעותית והפך לעדין ואלגנטי יותר -->
+                <a href="https://calendly.com/wildb7/meet" target="_blank" rel="noopener noreferrer" 
+                   class="inline-block bg-[#0B192C] text-white px-5 py-2 text-sm font-semibold rounded-full hover:bg-[#D4AF37] hover:text-[#0B192C] transition-all duration-300 shadow-md">
+                   🎁 לתיאום פגישת מתנה
+                </a>
+                
+                <p class="text-xs text-gray-400 mt-2">
+                    או בלינק: <a href="https://calendly.com/wildb7/meet" target="_blank" rel="noopener noreferrer" class="hover:underline">https://calendly.com/wildb7/meet</a>
+                </p>
+
+                <div class="mt-8 text-[#0B192C] font-bold">
+                    בת שבע וילד | ביג אפקט בע"מ
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- סקריפט הטיפול בלחיצות -->
+    <script>
+        function showSection(sectionType) {
+            // קודם כל נסתיר את כל האזורים
+            document.getElementById('sales-section').classList.add('hidden');
+            document.getElementById('marketing-section').classList.add('hidden');
+            document.getElementById('authority-section').classList.add('hidden');
+            
+            // נציג את האזור הרלוונטי ואת ה-CTA התחתון
+            const activeSection = document.getElementById(sectionType + '-section');
+            activeSection.classList.remove('hidden');
+            document.getElementById('footer-cta').classList.remove('hidden');
+            
+            // גלילה חלקה מטה כדי שהלקוח יראה את הסרטון מיד
+            setTimeout(() => {
+                activeSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
+        }
+    </script>
+</body>
+</html>
